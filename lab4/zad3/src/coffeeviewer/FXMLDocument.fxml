@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="coffeeviewer.FXMLDocumentController">
+    <children>
+      <TableView fx:id="tableView" layoutX="8.0" layoutY="5.0" prefHeight="407.0" prefWidth="666.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" text="name" />
+          <TableColumn fx:id="supplierIdColumn" text="supplierId" />
+          <TableColumn fx:id="priceColumn" text="price" />
+          <TableColumn fx:id="salesColumn" text="sales" />
+          <TableColumn fx:id="totalColumn" text="total" /> 
+        </columns>
+      </TableView>
+    </children>
+</AnchorPane>
