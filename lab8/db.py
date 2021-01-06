@@ -1,10 +1,14 @@
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, String, ForeignKey, Table
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
 
 Base = declarative_base()
 Session = None
 
+connection_table = Table('connection', Base.metadata,
+                         Column('firstUserId', Integer, ForeignKey('users.id'), primary_key=True),
+                         Column('secondUserId', Integer, ForeignKey('users.id'), primary_key=True)
+                         )
 
 class User(Base):
     __tablename__ = 'users'
@@ -15,11 +19,13 @@ class User(Base):
     address = relationship('Address', back_populates='user')
     eMailAddresses = relationship("EMailAddress", back_populates='user')
     phoneNumber = relationship('PhoneNumber', back_populates='user')
-    usersList = relationship('User', back_populates='usersList')
+    usersList = relationship('User', secondary=connection_table, back_populates='usersList',
+                             primaryjoin=connection_table.c.firstUserId == id,
+                             secondaryjoin=connection_table.c.secondUserId == id)
 
     def __repr__(self):
         return f"<User(firstName={self.firstName}, lastName={self.lastName}, address={self.address}, " \
-               f"eMailAddresses={self.eMailAddresses}, phoneNumber={self.phoneNumber}>"
+               f"eMailAddresses={self.eMailAddresses}, phoneNumber={self.phoneNumber}, connected={self.usersList}>"
 
     @staticmethod
     def add(first_name, last_name):
@@ -44,11 +50,11 @@ class User(Base):
 
         return users_found
 
-    def connect_with_other(self, user):
-        self.usersList.append(user)
+    def connect(self, user):
         user.usersList.append(self)
-
+        self.usersList.append(user)
         Session.commit()
+
 
 class Address(Base):
     __tablename__ = 'addresses'
@@ -116,9 +122,9 @@ class PhoneNumber(Base):
 
         Session.commit()
 
+
 def create_metadata(connection):
     global Session
 
     Base.metadata.create_all(connection)
     Session = sessionmaker(connection)()
-
