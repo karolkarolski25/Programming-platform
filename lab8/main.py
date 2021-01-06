@@ -47,6 +47,9 @@ for i in range(len(users)):
         print(f"lastName: {users[i].lastName}")
         print(f"Address: {users[i].address}")
         print(f"eMailAddress: {users[i].eMailAddresses}")
-        print(f"phoneNumbers {users[i].phoneNumber}")
-        print(f"Connected users {users[i].usersList}")
+        print(f"phoneNumbers: {users[i].phoneNumber}")
+
+        for usr in range(len(users[i].usersList)):
+            print(f"Connected users: {users[i].usersList[usr].firstName}")
+
     print()
