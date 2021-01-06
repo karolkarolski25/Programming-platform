@@ -37,10 +37,16 @@ add_users(0)
 # user.create_connection(user1)
 
 
-users = User.find(['FirstName25', 'FirstNameTest', 'FirstName10'])
+users = User.find(['FirstName25', 'FirstNameTest', 'FirstNameQwerty'])
 
 print()
 
 for i in range(len(users)):
-    print(users[i])
+    if users[i] is not None:
+        print(f"firstName: {users[i].firstName}")
+        print(f"lastName: {users[i].lastName}")
+        print(f"Address: {users[i].address}")
+        print(f"eMailAddress: {users[i].eMailAddresses}")
+        print(f"phoneNumbers {users[i].phoneNumber}")
+        print(f"Connected users {users[i].usersList}")
     print()
