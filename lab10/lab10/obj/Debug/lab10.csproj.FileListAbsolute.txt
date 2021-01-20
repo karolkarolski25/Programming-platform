@@ -1,0 +1,7 @@
+D:\Reszta\OneDrive\Studia\Semestr 5\Platformy Programowania\lab10\lab10\bin\Debug\lab10.exe.config
+D:\Reszta\OneDrive\Studia\Semestr 5\Platformy Programowania\lab10\lab10\bin\Debug\lab10.exe
+D:\Reszta\OneDrive\Studia\Semestr 5\Platformy Programowania\lab10\lab10\bin\Debug\lab10.pdb
+D:\Reszta\OneDrive\Studia\Semestr 5\Platformy Programowania\lab10\lab10\obj\Debug\lab10.csprojAssemblyReference.cache
+D:\Reszta\OneDrive\Studia\Semestr 5\Platformy Programowania\lab10\lab10\obj\Debug\lab10.csproj.CoreCompileInputs.cache
+D:\Reszta\OneDrive\Studia\Semestr 5\Platformy Programowania\lab10\lab10\obj\Debug\lab10.exe
+D:\Reszta\OneDrive\Studia\Semestr 5\Platformy Programowania\lab10\lab10\obj\Debug\lab10.pdb
