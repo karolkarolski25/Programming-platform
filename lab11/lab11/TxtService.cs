@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace lab10
+namespace lab11
 {
     public static class TxtService
     {

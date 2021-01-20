@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Numerics;
 
-namespace lab10
+namespace lab11
 {
     public static class Factorial
     {

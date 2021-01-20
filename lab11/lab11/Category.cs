@@ -1,4 +1,4 @@
-﻿namespace lab10
+﻿namespace lab11
 {
     public class Category
     {
