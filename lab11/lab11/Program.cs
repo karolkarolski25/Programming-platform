@@ -26,11 +26,76 @@ namespace lab11
 
             warehouse.GetProductsList();
 
+            /*       
+                Added product
+                Added product
+                Added product
+                Added product
+
+                Updated Id: 0, Name: ProductName1,
+                        Category: Id: 2, Name: Category3, Description: Category description3,
+                        Supplier: Id: 2, CompanyName: CompanyName3, City: City3, homePage: HomePage3 from 7 to 100
+
+                Product with id 123 not found
+
+                Products count: 4
+
+                Products list
+
+                Id: 0, Name: ProductName1,
+                        Category: Id: 2, Name: Category3, Description: Category description3,
+                        Supplier: Id: 2, CompanyName: CompanyName3, City: City3, homePage: HomePage3
+                        Count: 100
+
+                Id: 1, Name: ProductName2,
+                        Category: Id: 2, Name: Category3, Description: Category description3,
+                        Supplier: Id: 5, CompanyName: CompanyName6, City: City6, homePage: HomePage6
+                        Count: 8
+
+                Id: 2, Name: ProductName3,
+                        Category: Id: 4, Name: Category5, Description: Category description5,
+                        Supplier: Id: 2, CompanyName: CompanyName3, City: City3, homePage: HomePage3
+                        Count: 7
+
+                Id: 3, Name: ProductName4,
+                        Category: Id: 2, Name: Category3, Description: Category description3,
+                        Supplier: Id: 1, CompanyName: CompanyName2, City: City2, homePage: HomePage2
+                        Count: 2
+            */
+
             //3
-            Factorial.Start(50000);
+            Factorial.Start(250000);
+
+            /*
+                Factorial result: 3,018230E+1240914
+                RunTime 00:01:57.53 ms
+            */
 
             //4
             TxtService.MostFrequent("holmes.txt");
+
+            /*
+                się - 785
+                nie - 703
+                sir - 284
+                jest - 233
+                pan - 230
+                ale - 204
+                mnie - 179
+                tak - 170
+                jego - 170
+                był - 158
+                holmes - 151
+                czy - 150
+                już - 113
+                jak - 108
+                było - 105
+                stapleton - 96
+                przez - 95
+                ten - 94
+                jej - 91
+                mortimer - 86
+            */
         }
 
         private static void AddCategories(int count)
